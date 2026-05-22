@@ -1,9 +1,8 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
+import { Linkedin, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/animated/reveal";
 import { Eyebrow } from "@/components/sections/services";
 import { team } from "@/lib/data";
@@ -21,16 +20,16 @@ export function Team() {
           </Reveal>
           <Reveal direction="up" delay={0.1} className="lg:col-span-5">
             <p className="text-pretty text-white/70 leading-relaxed">
-              Senior leaders with two decades on the most consequential projects in the country.
-              No project goes without a principal-in-charge. Period.
+              Senior leaders accountable for delivery on every project. No project goes without
+              a principal-in-charge.
             </p>
           </Reveal>
         </div>
 
-        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((m, i) => (
             <Reveal as="li" key={m.name} delay={i * 0.05}>
-              <Card member={m} />
+              <Card member={m} index={i} />
             </Reveal>
           ))}
         </ul>
@@ -39,54 +38,60 @@ export function Team() {
   );
 }
 
-function Card({ member }: { member: (typeof team)[number] }) {
+function Card({ member, index }: { member: (typeof team)[number]; index: number }) {
   return (
     <motion.article
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -4 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative overflow-hidden rounded-3xl bg-[var(--color-steel-2)] ring-1 ring-white/10"
+      className="group relative h-full overflow-hidden rounded-3xl bg-white/[0.03] p-7 ring-1 ring-white/10 backdrop-blur"
     >
-      <div className="relative aspect-[4/5] overflow-hidden">
-        <Image
-          src={member.image}
-          alt={`${member.name} — ${member.role}`}
-          fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)] via-[var(--color-ink)]/20 to-transparent" />
+      {/* Hover glow */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        style={{
+          background:
+            "radial-gradient(120% 80% at 0% 0%, rgba(59,130,246,0.15), transparent 60%)",
+        }}
+      />
 
+      <div className="relative flex items-center justify-between">
+        <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/45">
+          {String(index + 1).padStart(2, "0")}
+        </span>
         <a
           href={member.linkedin}
           aria-label={`${member.name} on LinkedIn`}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur-md text-white transition-all hover:bg-white hover:text-[var(--color-ink)]"
+          className="grid h-9 w-9 place-items-center rounded-full bg-white/5 ring-1 ring-white/10 text-white/70 transition-colors hover:bg-white hover:text-[var(--color-ink)]"
         >
-          <Linkedin className="h-4 w-4" />
+          <Linkedin className="h-3.5 w-3.5" />
         </a>
-
-        <div className="absolute inset-x-5 bottom-5">
-          <p className="text-xs text-white/60 uppercase tracking-[0.18em]">
-            {member.years}+ years
-          </p>
-          <h3 className="mt-1 font-display text-2xl text-white">{member.name}</h3>
-          <p className="text-white/75">{member.role}</p>
-        </div>
       </div>
 
-      <div className="px-5 py-5">
-        <ul className="flex flex-wrap gap-2">
-          {member.specialties.map((s) => (
-            <li
-              key={s}
-              className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/70 ring-1 ring-white/10"
-            >
-              {s}
-            </li>
-          ))}
-        </ul>
+      <h3 className="relative mt-8 font-display text-2xl tracking-tight text-white">
+        {member.name}
+      </h3>
+      <p className="relative mt-2 text-white/75 leading-snug">{member.role}</p>
+
+      <div className="relative mt-6 flex items-baseline gap-2 border-t border-white/10 pt-5">
+        <span className="font-display text-3xl tracking-tight text-white">{member.years}+</span>
+        <span className="text-xs uppercase tracking-[0.18em] text-white/50">years experience</span>
       </div>
+
+      <ul className="relative mt-5 flex flex-wrap gap-2">
+        {member.specialties.map((s) => (
+          <li
+            key={s}
+            className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/70 ring-1 ring-white/10"
+          >
+            {s}
+          </li>
+        ))}
+      </ul>
+
+      <ArrowUpRight className="absolute right-7 bottom-7 h-4 w-4 text-white/20 opacity-0 transition-all group-hover:opacity-100 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
     </motion.article>
   );
 }

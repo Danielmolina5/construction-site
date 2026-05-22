@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Linkedin, Instagram } from "lucide-react";
 import { brand, nav } from "@/lib/data";
+import { GatLogo } from "@/components/brand/gat-logo";
 
 export function Footer() {
   return (
@@ -8,14 +9,8 @@ export function Footer() {
       <div className="container-page">
         <div className="grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-[var(--color-ink-2)] ring-1 ring-white/10 overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo-mark.svg" alt="" className="h-11 w-11" />
-              </span>
-              <span className="text-[15px] font-medium tracking-[0.22em] text-white/85">
-                {brand.name.toUpperCase()} CONSTRUCTION
-              </span>
+            <div className="inline-flex items-center">
+              <GatLogo size={100} />
             </div>
             <p className="mt-6 max-w-md text-pretty text-white/60 leading-relaxed">
               {brand.full} is a Florida-based construction project management firm delivering

@@ -165,10 +165,10 @@ function DashboardMockup() {
             />
           </div>
           <div className="mt-3 flex items-center justify-between text-xs text-white/45">
-            <span>Day 412 of 540</span>
+            <span>Day 142 of 240</span>
             <span className="inline-flex items-center gap-1">
               <Clock className="h-3 w-3" />
-              +18d ahead of plan
+              +12d ahead of plan
             </span>
           </div>
         </div>

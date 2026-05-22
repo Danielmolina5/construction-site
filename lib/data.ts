@@ -61,10 +61,10 @@ export const nav = [
 ];
 
 export const stats = [
-  { value: 500, suffix: "+", label: "Projects Delivered" },
-  { value: 15, suffix: "+", label: "Years of Practice" },
-  { value: 98, suffix: "%", label: "Client Satisfaction" },
-  { value: 500, prefix: "$", suffix: "M+", label: "Capital Managed" },
+  { value: 60, suffix: "+", label: "Projects Delivered" },
+  { value: 8, suffix: "+", label: "Years of Practice" },
+  { value: 100, suffix: "%", label: "Client Satisfaction" },
+  { value: 75, prefix: "$", suffix: "M+", label: "Capital Managed" },
 ] as const;
 
 export const trustLogos = [
@@ -95,7 +95,7 @@ export const services: Service[] = [
     description:
       "Programmatic discovery, feasibility studies, and pre-construction strategy that protect scope and capital from day one.",
     bullets: ["Feasibility & cost modeling", "Permitting strategy", "Procurement planning"],
-    stat: { value: "−14%", label: "Avg. pre-con cost reduction" },
+    stat: { value: "−8%", label: "Avg. pre-con cost reduction" },
   },
   {
     icon: Building2,
@@ -103,7 +103,7 @@ export const services: Service[] = [
     description:
       "End-to-end owner's representation across design, contracting, and delivery — accountable to your timeline and budget.",
     bullets: ["Owner's representative", "Contractor selection", "Change-order control"],
-    stat: { value: "98%", label: "Repeat client engagement" },
+    stat: { value: "95%", label: "Repeat client engagement" },
   },
   {
     icon: HardHat,
@@ -119,7 +119,7 @@ export const services: Service[] = [
     description:
       "Cost engineering, value-engineering, and forecast variance reporting so you always know where the money is.",
     bullets: ["Earned-value tracking", "Variance forecasting", "Vendor reconciliation"],
-    stat: { value: "−4.1%", label: "Avg. budget variance" },
+    stat: { value: "−2.4%", label: "Avg. budget variance" },
   },
   {
     icon: CalendarClock,
@@ -127,7 +127,7 @@ export const services: Service[] = [
     description:
       "CPM scheduling, look-aheads, and integrated master schedules that hold every stakeholder to the same critical path.",
     bullets: ["P6 master schedules", "4-week look-aheads", "Float & risk analysis"],
-    stat: { value: "−6.4%", label: "Avg. schedule variance" },
+    stat: { value: "−3.2%", label: "Avg. schedule variance" },
   },
   {
     icon: ShieldAlert,
@@ -135,7 +135,7 @@ export const services: Service[] = [
     description:
       "Pre-empt the surprises — insurance review, contract scrutiny, and continuity planning across the project lifecycle.",
     bullets: ["Risk register & matrix", "Contract & insurance audit", "Continuity protocols"],
-    stat: { value: "$2.4B", label: "Capital protected" },
+    stat: { value: "$75M+", label: "Capital protected" },
   },
 ];
 
@@ -171,12 +171,12 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Miami, FL",
     year: "2024",
-    size: "640,000 sf",
-    value: "$340M",
+    size: "280,000 sf",
+    value: "$32M",
     image:
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1600&q=80",
     blurb:
-      "A 42-story Class-A office tower delivered four months ahead of schedule with a 12% capital underrun.",
+      "An 18-story Class-A office tower delivered three months ahead of schedule with a 6% capital underrun.",
   },
   {
     slug: "summit-medical-pavilion",
@@ -186,12 +186,12 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Orlando, FL",
     year: "2024",
-    size: "320,000 sf",
-    value: "$210M",
+    size: "90,000 sf",
+    value: "$18M",
     image:
       "https://images.unsplash.com/photo-1587351021355-a479a299d2f9?auto=format&fit=crop&w=1600&q=80",
     blurb:
-      "A 220-bed acute-care pavilion executed under live-hospital conditions with zero patient disruption.",
+      "An 80-bed acute-care pavilion executed under live-hospital conditions with zero patient disruption.",
   },
   {
     slug: "northgate-distribution-hub",
@@ -201,12 +201,12 @@ export const projects: Project[] = [
     status: "Current",
     location: "Tampa, FL",
     year: "2026",
-    size: "1.2M sf",
-    value: "$185M",
+    size: "250,000 sf",
+    value: "$28M",
     image:
       "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80",
     blurb:
-      "Largest automated fulfillment center in the region, on track for early-Q4 occupancy.",
+      "A regional automated fulfillment center on track for early-Q4 occupancy.",
   },
   {
     slug: "ridgeline-residences",
@@ -216,12 +216,12 @@ export const projects: Project[] = [
     status: "Current",
     location: "Fort Lauderdale, FL",
     year: "2026",
-    size: "412 units",
-    value: "$240M",
+    size: "96 units",
+    value: "$22M",
     image:
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80",
     blurb:
-      "Two-tower luxury condominium development with rooftop amenities and a private cultural pavilion.",
+      "Boutique condominium development with rooftop amenities and a private resident pavilion.",
   },
   {
     slug: "polaris-academy",
@@ -231,12 +231,12 @@ export const projects: Project[] = [
     status: "Completed",
     location: "West Palm Beach, FL",
     year: "2023",
-    size: "190,000 sf",
-    value: "$95M",
+    size: "60,000 sf",
+    value: "$14M",
     image:
       "https://images.unsplash.com/photo-1562516710-38a2c8a9e72a?auto=format&fit=crop&w=1600&q=80",
     blurb:
-      "A K-12 STEM campus blending mass-timber construction with passive-house energy performance.",
+      "A K-12 STEM addition blending mass-timber construction with passive-house energy performance.",
   },
   {
     slug: "marina-cultural-arts-center",
@@ -245,43 +245,43 @@ export const projects: Project[] = [
     category: "Commercial",
     status: "Future",
     location: "Boca Raton, FL",
-    year: "2028",
-    size: "165,000 sf",
-    value: "$120M",
+    year: "2027",
+    size: "55,000 sf",
+    value: "$12M",
     image:
       "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1600&q=80",
     blurb:
-      "Waterfront cultural anchor with adaptive performance halls and a public bayside promenade.",
+      "Waterfront cultural anchor with an adaptive performance hall and a public bayside promenade.",
   },
   {
     slug: "horizon-life-sciences",
-    title: "Horizon Life Sciences Campus",
+    title: "Horizon Life Sciences Lab",
     client: "Horizon Therapeutics",
     category: "Healthcare",
     status: "Future",
     location: "Jacksonville, FL",
-    year: "2029",
-    size: "480,000 sf",
-    value: "$520M",
+    year: "2028",
+    size: "120,000 sf",
+    value: "$48M",
     image:
       "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1600&q=80",
     blurb:
-      "Three-building research campus with BSL-2/3 laboratories and a clinical-translational hub.",
+      "Research lab building with BSL-2 laboratories and a clinical-translational hub.",
   },
   {
     slug: "summit-data-center",
-    title: "Summit Data Center IV",
+    title: "Summit Data Center",
     client: "Summit Cloud Infrastructure",
     category: "Industrial",
     status: "Future",
     location: "Miami-Dade, FL",
     year: "2028",
-    size: "60MW IT load",
-    value: "$680M",
+    size: "15MW IT load",
+    value: "$35M",
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=80",
     blurb:
-      "Hyperscale liquid-cooled data center with on-site solar and 99.999% uptime architecture.",
+      "Liquid-cooled regional data center with on-site solar and 99.99% uptime architecture.",
   },
 ];
 
@@ -373,7 +373,7 @@ export type Review = {
 export const reviews: Review[] = [
   {
     quote:
-      "GAT ran our tower as if it were their own balance sheet. Four months ahead, eight figures under — and not a single change order we didn't bless ourselves.",
+      "GAT ran our tower as if it were their own balance sheet. Three months ahead, six percent under budget — and not a single change order we didn't bless ourselves.",
     author: "Karen Liang",
     title: "SVP Capital Projects, Pacific Capital Partners",
     project: "Harbor Financial Tower",
@@ -521,19 +521,19 @@ export type BigNumber = {
 export const bigNumbers: BigNumber[] = [
   {
     icon: DollarSign,
-    value: "$2.4B",
+    value: "$75M+",
     label: "Capital delivered",
     sub: "Across the last five years",
   },
   {
     icon: Building2,
-    value: "640+",
+    value: "60+",
     label: "Projects executed",
-    sub: "All sectors, every region",
+    sub: "Across Florida sectors",
   },
   {
     icon: TrendingUp,
-    value: "−6.4%",
+    value: "−3.2%",
     label: "Avg. schedule variance",
     sub: "Consistently ahead of plan",
   },
@@ -558,49 +558,49 @@ export type Category = {
 export const categories: Category[] = [
   {
     name: "Commercial",
-    count: 184,
+    count: 22,
     icon: Building2,
     image:
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Healthcare",
-    count: 96,
+    count: 12,
     icon: ShieldCheck,
     image:
       "https://images.unsplash.com/photo-1587351021355-a479a299d2f9?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Industrial",
-    count: 142,
+    count: 9,
     icon: Factory,
     image:
       "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Residential",
-    count: 78,
+    count: 7,
     icon: Home,
     image:
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Education",
-    count: 54,
+    count: 5,
     icon: GraduationCap,
     image:
       "https://images.unsplash.com/photo-1562516710-38a2c8a9e72a?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Civic / Cultural",
-    count: 32,
+    count: 3,
     icon: Landmark,
     image:
       "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Mission-Critical",
-    count: 28,
+    count: 2,
     icon: Server,
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
@@ -619,14 +619,14 @@ export type OsKpi = {
 
 export const meridianOs = {
   projectName: "Harbor Financial Tower",
-  status: "Active · Day 412 of 540",
+  status: "Active · Day 142 of 240",
   kpis: [
-    { label: "Schedule", value: "+18d", delta: "ahead of plan", positive: true },
-    { label: "Budget", value: "−$11.4M", delta: "vs. forecast", positive: true },
+    { label: "Schedule", value: "+12d", delta: "ahead of plan", positive: true },
+    { label: "Budget", value: "−$1.2M", delta: "vs. forecast", positive: true },
     { label: "Safety", value: "0", delta: "lost-time incidents", positive: true },
-    { label: "RFI cycle", value: "2.1d", delta: "median resolution", positive: true },
+    { label: "RFI cycle", value: "2.8d", delta: "median resolution", positive: true },
   ] as OsKpi[],
-  schedule: 0.74,
+  schedule: 0.59,
   vendors: [
     { name: "Structural", state: "ok" },
     { name: "Envelope", state: "ok" },
@@ -673,45 +673,45 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     project: "Harbor Financial Tower",
-    sector: "Commercial · $340M",
+    sector: "Commercial · $32M",
     image:
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1400&q=80",
     before: [
-      "12-month schedule slip forecast",
-      "$28M over original budget",
-      "Three contractors in dispute",
+      "5-month schedule slip forecast",
+      "$1.8M over original budget",
+      "Two trade packages in dispute",
     ],
     after: [
-      "Delivered four months ahead",
-      "12% capital underrun",
+      "Delivered three months ahead",
+      "6% capital underrun",
       "Zero outstanding claims at handover",
     ],
-    pull: { value: "+16 months", label: "Recovered against forecast" },
+    pull: { value: "+5 months", label: "Recovered against forecast" },
   },
   {
     project: "Summit Medical Pavilion",
-    sector: "Healthcare · $210M",
+    sector: "Healthcare · $18M",
     image:
       "https://images.unsplash.com/photo-1587351021355-a479a299d2f9?auto=format&fit=crop&w=1400&q=80",
     before: [
       "Live-hospital phasing risk",
-      "Two failed early bid packages",
-      "Compliance gaps in initial design",
+      "Failed initial bid package",
+      "Compliance gaps in design",
     ],
     after: [
       "Zero patient disruption events",
-      "Re-bid recovered $4.8M",
-      "Full DSHS approval first pass",
+      "Re-bid recovered $420K",
+      "Full AHCA approval first pass",
     ],
     pull: { value: "0", label: "Patient disruption events" },
   },
   {
     project: "Northgate Distribution Hub",
-    sector: "Industrial · $185M",
+    sector: "Industrial · $28M",
     image:
       "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80",
     before: [
-      "Automation vendor 9 months late",
+      "Automation vendor 4 months late",
       "Foundation re-design required",
       "Tariff exposure on steel package",
     ],
@@ -720,7 +720,7 @@ export const caseStudies: CaseStudy[] = [
       "Re-design absorbed inside float",
       "Locked steel below tariff window",
     ],
-    pull: { value: "−9 months", label: "Vendor delay absorbed" },
+    pull: { value: "−4 months", label: "Vendor delay absorbed" },
   },
 ];
 

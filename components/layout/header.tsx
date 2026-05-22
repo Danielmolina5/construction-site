@@ -6,6 +6,7 @@ import { ArrowUpRight, Menu, X, Phone } from "lucide-react";
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { brand, nav } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import { GatLogo } from "@/components/brand/gat-logo";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -42,9 +43,6 @@ export function Header() {
         <div className="container-page flex h-20 items-center justify-between">
           <Link href="/" className="group inline-flex items-center gap-2" aria-label={brand.full}>
             <Logo />
-            <span className="hidden sm:inline-block text-[15px] font-medium tracking-[0.22em] text-white/80 group-hover:text-white transition-colors">
-              {brand.name.toUpperCase()}
-            </span>
           </Link>
 
           <nav aria-label="Primary" className="hidden md:flex items-center gap-1">
@@ -171,12 +169,8 @@ function navigateAnchor(hash: string) {
 
 function Logo() {
   return (
-    <span
-      aria-hidden
-      className="grid h-10 w-10 place-items-center rounded-xl bg-[var(--color-ink-2)] ring-1 ring-white/10 overflow-hidden"
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/logo-mark.svg" alt="" className="h-10 w-10" />
+    <span aria-hidden className="inline-flex items-center">
+      <GatLogo size={44} />
     </span>
   );
 }

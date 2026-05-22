@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 type Direction = "up" | "down" | "left" | "right" | "none";
 
 interface RevealProps extends React.HTMLAttributes<HTMLDivElement> {
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
   direction?: Direction;
   delay?: number;
   distance?: number;

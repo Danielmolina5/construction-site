@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" role="img" aria-label="GAT Construction Management" fill="none">
+  <!-- G -->
+  <path d="M30 12c-10 0-18 8-18 20s8 20 18 20c6 0 10-2 13-5V35h-12v6h6v6c-2 1-4 2-7 2-7 0-12-6-12-14s5-14 12-14c4 0 7 2 9 4l5-5c-3-3-8-6-14-6z" fill="currentColor"/>
+  <!-- A as triangle (building motif inside) -->
+  <g>
+    <path d="M82 51L98 13l16 38h-7l-2-6H91l-2 6h-7zm11-12h10l-5-13-5 13z" fill="currentColor"/>
+    <!-- Inner mini building bars, in accent -->
+    <g fill="#3B82F6">
+      <rect x="95" y="28" width="2" height="14" rx="0.5"/>
+      <rect x="99" y="24" width="2" height="18" rx="0.5"/>
+      <rect x="103" y="30" width="2" height="12" rx="0.5"/>
+    </g>
+  </g>
+  <!-- T -->
+  <path d="M122 19h28v6h-11v26h-7V25h-10v-6z" fill="currentColor"/>
+  <!-- Arc base mark -->
+  <path d="M22 55c0 4 24 6 56 6s56-2 56-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <!-- Wordmark right -->
+  <g fill="currentColor" opacity="0.92">
+    <text x="160" y="30" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" letter-spacing="2.4">CONSTRUCTION</text>
+    <text x="160" y="46" font-family="'Space Grotesk', sans-serif" font-weight="500" font-size="9" letter-spacing="3" fill="#3B82F6">MANAGEMENT, INC.</text>
+  </g>
+</svg>
